@@ -12,12 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('list');
 });
 
 Route::get('helo',function () {
     return view('template');
 });
+Route::get('halo', function() {
+	return view('Master/master');
+});
+
+Route::get('table', 'BarangController@index');
 
 Auth::routes();
 
